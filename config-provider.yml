@@ -4,39 +4,84 @@ spring:
 
 ---
 server:
-  port: 8201
+  port: 8001 # 端口号
+
+# 配置Mybatis
+mybatis:
+  type-aliases-package: com.dannijiang.springcloud.pojo
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+# 配置Spring
 spring:
-  profiles: dev 
+  profiles: dev
   application:
     name: springcloud-provider
+  datasource: #数据库
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/db01?serverTimezone=UTC&useSSL=true&useUnicode=true&CharacterEncoding=UTF-8
+    username: root
+    password: Nopass_121
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
+# 配置Eureka，客户端
 eureka:
   client:
     service-url:
-      defaultZone: http://server1:7001/eureka/
+      defaultZone: http://server1:7001/eureka/,http://server2:7002/eureka/,http://server3:7003/eureka/ # 注册中心
 
 ---
 server:
-  port: 8202
+  port: 8001 # 端口号
+
+# 配置Mybatis
+mybatis:
+  type-aliases-package: com.dannijiang.springcloud.pojo
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+# 配置Spring
 spring:
   profiles: test
   application:
     name: springcloud-provider
+  datasource: #数据库
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/db01?serverTimezone=UTC&useSSL=true&useUnicode=true&CharacterEncoding=UTF-8
+    username: root
+    password: Nopass_121
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
+# 配置Eureka，客户端
 eureka:
   client:
     service-url:
-      defaultZone: http://server1:7001/eureka/
+      defaultZone: http://server1:7001/eureka/,http://server2:7002/eureka/,http://server3:7003/eureka/ # 注册中心
 
 ---
 server:
-  port: 8203
+  port: 8001 # 端口号
+
+# 配置Mybatis
+mybatis:
+  type-aliases-package: com.dannijiang.springcloud.pojo
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+# 配置Spring
 spring:
   profiles: prod
   application:
     name: springcloud-provider
+  datasource: #数据库
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/db01?serverTimezone=UTC&useSSL=true&useUnicode=true&CharacterEncoding=UTF-8
+    username: root
+    password: Nopass_121
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
+# 配置Eureka，客户端
 eureka:
   client:
     service-url:
-      defaultZone: http://server1:7001/eureka/
+      defaultZone: http://server1:7001/eureka/,http://server2:7002/eureka/,http://server3:7003/eureka/ # 注册中心
