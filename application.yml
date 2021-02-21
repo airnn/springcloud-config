@@ -1,0 +1,20 @@
+spring: 
+  profiles: 
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: spirngcloud-config-dev
+
+---
+spring:
+  profiles: test
+  application:
+    name: spirngcloud-config-test
+
+---
+spring:
+  profiles: prod
+  application:
+    name: spirngcloud-config-prod
