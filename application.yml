@@ -5,16 +5,16 @@ spring:
 spring:
   profiles: dev
   application:
-    name: spirngcloud-config-dev
+    name: springcloud-config-dev
 
 ---
 spring:
   profiles: test
   application:
-    name: spirngcloud-config-test
+    name: springcloud-config-test
 
 ---
 spring:
   profiles: prod
   application:
-    name: spirngcloud-config-prod
+    name: springcloud-config-prod
