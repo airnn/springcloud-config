@@ -20,7 +20,7 @@ eureka:
     fetch-registry: false # 当前实例为注册中心
     service-url: # Map
       # 默认 this.serviceUrl.put("defaultZone", "http://localhost:8761/eureka/");
-      defaultZone: http://localhost:eureka/
+      defaultZone: http://localhost:7001/eureka/
 
 ---
 server:
@@ -40,7 +40,7 @@ eureka:
     fetch-registry: false # 当前实例为注册中心
     service-url: # Map
       # 默认 this.serviceUrl.put("defaultZone", "http://localhost:8761/eureka/");
-      defaultZone: http://localhost:eureka/
+      defaultZone: http://localhost:7001/eureka/
 
 ---
 server:
@@ -60,4 +60,4 @@ eureka:
     fetch-registry: false # 当前实例为注册中心
     service-url: # Map
       # 默认 this.serviceUrl.put("defaultZone", "http://localhost:8761/eureka/");
-      defaultZone: http://localhost:eureka/
+      defaultZone: http://localhost:7001/eureka/
